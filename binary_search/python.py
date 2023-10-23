@@ -31,10 +31,10 @@ def binarySearch(array, item):
 
     while low <= high:
 
-        if(item == high + 1):
+        if(array[high] == item):
             return high
 
-        if(item == low):
+        if(array[low] == item):
             return low
 
         mid = (low + high) // 2

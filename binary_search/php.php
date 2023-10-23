@@ -10,29 +10,41 @@ function binarySearch(array $array, mixed $value) : int | bool {
 
     while($low <= $high) {
 
-        if($value == $high + 1) {
-            return $high;
-        }
-
-        if($value == $low) {
-            return $low;
-        }
-
         $mid = floor(($low + $high) / 2);
 
         $guess = $array[$mid];
 
-        if(strcmp($guess, $value) === 0) {
-            return $mid;
+        if(is_numeric($value)) {
+
+            if($guess === $value) {
+                return $mid;
+            }
+    
+            if($guess > $value) {
+                $high = $mid - 1;
+            }
+    
+            else {
+                $low = $mid + 1;
+            }
+
+        } else {
+
+            if(strcmp($guess, $value) === 0) {
+                return $mid;
+            }
+    
+            if(strcmp($guess, $value) > 0) {
+                $high = $mid - 1;
+            }
+    
+            else {
+                $low = $mid + 1;
+            }
+
         }
 
-        if(strcmp($guess, $value) > 0) {
-            $high = $mid - 1;
-        }
 
-        else {
-            $low = $mid + 1;
-        }
 
     }
 
@@ -40,7 +52,7 @@ function binarySearch(array $array, mixed $value) : int | bool {
 
 }
 
-//$array = range(1, 100);
+//$array = range(0, 100);
 
 $array = ['apple', 'banana', 'cherry', 'lemon', 'orange', 'strawberry'];
 

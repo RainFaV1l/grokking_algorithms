@@ -7,14 +7,6 @@ const binarySearch = (array, value) => {
 
     while (low <= high) {
 
-        if(value == high + 1) {
-            return high;
-        }
-
-        if(value == low) {
-            return low;
-        }
-
         const mid = Math.floor((low + high) / 2);
 
         const guess = array[mid]
