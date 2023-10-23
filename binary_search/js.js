@@ -1,9 +1,19 @@
+// Бинарный поиск со строками и числами в JavaScript
+
 const binarySearch = (array, value) => {
 
     let low = 0;
     let high = array.length - 1;
 
     while (low <= high) {
+
+        if(value == high) {
+            return high;
+        }
+
+        if(value == low) {
+            return low;
+        }
 
         const mid = Math.floor((low + high) / 2);
 

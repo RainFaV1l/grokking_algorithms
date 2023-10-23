@@ -10,6 +10,14 @@ function binarySearch(array $array, mixed $value) : int | bool {
 
     while($low <= $high) {
 
+        if($value == $high) {
+            return $high;
+        }
+
+        if($value == $low) {
+            return $low;
+        }
+
         $mid = floor(($low + $high) / 2);
 
         $guess = $array[$mid];

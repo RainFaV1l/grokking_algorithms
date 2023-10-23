@@ -1,3 +1,5 @@
+# Бинарный поиск со строками и числами в Python
+
 # Формула - log2(n)
 
 # Пример | Отгадаем число из списка от 1 до 10 | Данное число мы можем отгадать за (log2(10) ~ 3)
@@ -28,6 +30,12 @@ def binarySearch(array, item):
     high = len(array) - 1
 
     while low <= high:
+
+        if(item == high):
+            return high
+
+        if(item == low):
+            return low
 
         mid = (low + high) // 2
 
