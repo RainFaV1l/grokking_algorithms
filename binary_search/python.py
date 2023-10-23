@@ -31,7 +31,7 @@ def binarySearch(array, item):
 
     while low <= high:
 
-        if(item == high):
+        if(item == high + 1):
             return high
 
         if(item == low):

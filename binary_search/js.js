@@ -7,7 +7,7 @@ const binarySearch = (array, value) => {
 
     while (low <= high) {
 
-        if(value == high) {
+        if(value == high + 1) {
             return high;
         }
 

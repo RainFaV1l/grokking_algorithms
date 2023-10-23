@@ -10,7 +10,7 @@ function binarySearch(array $array, mixed $value) : int | bool {
 
     while($low <= $high) {
 
-        if($value == $high) {
+        if($value == $high + 1) {
             return $high;
         }
 
