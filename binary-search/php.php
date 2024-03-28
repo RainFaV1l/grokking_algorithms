@@ -44,8 +44,6 @@ function binarySearch(array $array, mixed $value) : int | bool {
 
         }
 
-
-
     }
 
     return false;
